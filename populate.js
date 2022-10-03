@@ -1,19 +1,19 @@
 require("dotenv").config()
-const db = require ("./config/database")
-const Product = require("./Models/Product")
 
-const product = require("./Models/Product")
+const db = require ("./config/database")
+
+const Product = require("./Models/Product")
 
 Product.create (
     {
-            brand: "Olga Mesh" ,
-            type: "reloj",
-            model: "Tommy Hilfigher",
-            description: "Un reloj atemporal para toda ocasión. Si no querés estar pensando con qué combinarlo o si estás buscando regalar un reloj, entonces Olga Mesh es la elección ideal. Su tonalidad negra mate con destellos ‘rose gold’ la convierten en una pieza dificil de igualar. Tiene todo lo que necesitás.",
-            price: 79,
-            likes: [],
-            stock: 50,
-            photo: ["https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-abaco.jpg?fit=120%2C120&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-abaco-4.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-2.jpg?fit=1080%2C1080&ssl=1"],  
+    brand: "Olga Mesh" ,
+    type: "reloj",
+    model: "Tommy Hilfigher",
+    description: "Un reloj atemporal para toda ocasión. Si no querés estar pensando con qué combinarlo o si estás buscando regalar un reloj, entonces Olga Mesh es la elección ideal. Su tonalidad negra mate con destellos ‘rose gold’ la convierten en una pieza dificil de igualar. Tiene todo lo que necesitás.",
+    price: 79,
+    likes: [],
+    stock: 50,
+    photo: ["https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-abaco.jpg?fit=120%2C120&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-abaco-4.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2020/02/olga-mesh-2.jpg?fit=1080%2C1080&ssl=1"],  
     },
     {
         brand: "Porter Sepia" ,
@@ -178,7 +178,7 @@ Product.create (
     brand: "AQUE DE LOEWE EDT" ,
     type: "perfume",
     model: "juleriaque",
-    description: "",
+    description: "Las gafas cumplen con las normas internacionales de calidad, bajo conformidad con las disposiciones y requisitos fundamentales de seguridad establecidos en las normas europeas, americanas y australianas.",
     price: 115,
     likes: [],
     stock: 50,
@@ -188,7 +188,7 @@ Product.create (
     brand: "CK BE EDT" ,
     type: "perfume",
     model: "juleriaque",
-    description: "",
+    description: "Las gafas cumplen con las normas internacionales de calidad, bajo conformidad con las disposiciones y requisitos fundamentales de seguridad establecidos en las normas europeas, americanas y australianas.",
     price: 115,
     likes: [],
     stock: 50,
@@ -198,7 +198,7 @@ Product.create (
     brand: "CK EVERYONE EDT" ,
     type: "perfume",
     model: "juleriaque",
-    description: "",
+    description: "Las gafas cumplen con las normas internacionales de calidad, bajo conformidad con las disposiciones y requisitos fundamentales de seguridad establecidos en las normas europeas, americanas y australianas.",
     price: 115,
     likes: [],
     stock: 50,
@@ -208,7 +208,7 @@ Product.create (
     brand: "FLEUR DE PORTOFINO EDP" ,
     type: "perfume",
     model: "juleriaque",
-    description: "",
+    description: "Las gafas cumplen con las normas internacionales de calidad, bajo conformidad con las disposiciones y requisitos fundamentales de seguridad establecidos en las normas europeas, americanas y australianas.",
     price: 505,
     likes: [],
     stock: 50,
