@@ -4,7 +4,8 @@ const productsControllers = {
 
 	getProducts: async(req,res)=>{
 
-		let products = await product.find()
+		let products = await Product.find()
+		
             try{
                 if (products) {
                     res.status(200).json({
