@@ -94,17 +94,17 @@ const productsControllers = {
 
 			let product = await new Product(req.body).save()
 			res.status(201).json({
-				  massage: 'product created',
-				  success:true,
-				  response: product
+				massage: 'product created',
+				success:true,
+				response: product
 			})      
 			
-		  }catch (error) {
+		}catch (error) {
 			console.log(error)
 			res.status(400).json({
-				  message: error.message,
-				  success: false
-		  })
+				message: error.message,
+				success: false
+		})
   }},
 
   updateProduct: async (req, res) => {

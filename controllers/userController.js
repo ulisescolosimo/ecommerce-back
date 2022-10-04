@@ -239,14 +239,14 @@ const userController = {
                                 photo: user.photo
                             }
 
-                            let token = jwt.sign({id: user._id}, KEY_JWT, {expiresIn: 60*60*24})
+                            /* let token = jwt.sign({id: user._id}, KEY_JWT, {expiresIn: 60*60*24}) */
 
                             res.status(200).json({
                                 success: true,
                                 response: 
                                 {
                                     user: loginUser,
-                                    token: token
+                                    /* token: token */
                                 },
                                 message: "Welcome " + user.name
                             })
@@ -281,7 +281,7 @@ const userController = {
                                 user: loginUser,
                                 token: token
                             },
-                            message: "Welcome back" + user.name
+                            message: "Welcome back " + user.name
                         })
 
                     } else {
