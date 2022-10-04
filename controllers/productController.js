@@ -1,4 +1,45 @@
-const Product = require("../Models/Product");
+const Product = require('../Models/Product')
+const Joi = require('joi')
+
+
+const validator = Joi.object({
+	brand: Joi.string()
+	.required(),
+
+	model: Joi.string()
+	.required(),
+
+	type: Joi.string()
+	.required(),
+
+	photo: Joi.array()
+	.required(),
+
+	description: Joi.string()
+	.required()
+	.min(5)
+	.max(300)
+	.messages({
+		'string.min': 'Description: min 5 characters',
+		'string.max': 'Description: max 300 characters'
+	  }),
+
+	price: Joi.number()
+	.min(1)
+	.integer()
+	.required()
+	.messages({
+	    'number.integer' : 'Price: enter an integer',
+	}),
+
+	stock: Joi.number()
+	.integer()
+	.required()
+	.messages({
+	    'number.integer' : 'Stock: enter an integer',
+	}),
+
+})
 
 const productsControllers = {
   getProducts: async (req, res) => {
@@ -44,22 +85,26 @@ const productsControllers = {
       error: error,
     });
   },
+	
+	createProduct: async(req,res)=>{
+		
+		try {
+			let result = await validator.validateAsync(req.body)
+			console.log(result);
 
-  createProduct: async (req, res) => {
-    try {
-      let product = await new Product(req.body).save();
-      res.status(201).json({
-        message: "product created",
-        success: true,
-        response: product,
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(400).json({
-        message: error.message,
-        success: false,
-      });
-    }
+			let product = await new Product(req.body).save()
+			res.status(201).json({
+				  massage: 'product created',
+				  success:true,
+				  response: product
+			})      
+			
+		  }catch (error) {
+			console.log(error)
+			res.status(400).json({
+				  message: error.message,
+				  success: false
+		  })
   },
 
   updateProduct: async (req, res) => {
