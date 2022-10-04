@@ -105,7 +105,7 @@ const productsControllers = {
 				  message: error.message,
 				  success: false
 		  })
-  },
+  }},
 
   updateProduct: async (req, res) => {
     const id = req.params.id;

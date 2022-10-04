@@ -6,13 +6,13 @@ const OAuth2 = google.auth.OAuth2;
 const sendMail = async(mail, code) => {
 
     const client = new OAuth2(
-        process.env.GOOGLE_ID,
-        process.env.GOOGLE_SECRET,
-        process.env.GOOGLE_URL
+        GOOGLE_ID,
+        GOOGLE_SECRET,
+        GOOGLE_URL
     )
 
     client.setCredentials({
-        refresh_token: process.env.GOOGLE_REFRESH
+        refresh_token: GOOGLE_REFRESH
     })
 
     const accessToken = client.getAccessToken()
