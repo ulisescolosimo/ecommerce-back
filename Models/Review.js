@@ -7,7 +7,7 @@ const ReviewSchema = new mongoose.Schema ({
     star: {type: Number, required: true},
 })
 
-const User = mongoose.model(
+const Review = mongoose.model(
     "reviews",
     ReviewSchema
 )
