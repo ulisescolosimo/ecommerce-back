@@ -143,12 +143,12 @@ const productsControllers = {
       let deleted = await Product.findByIdAndDelete({ _id: id });
       if (deleted) {
         res.status(200).json({
-          message: "deleted successfully",
+          message: "Item deleted successfully",
           success: true,
         });
       } else {
         res.status(404).json({
-          message: "deleted failed",
+          message: "Item deleted failed",
           success: false,
         });
       }
