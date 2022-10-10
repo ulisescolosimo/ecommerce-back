@@ -6,12 +6,15 @@ const ReviewController = {
         const {
             user,
             product,
-            commentary,
+            reviewTitle,
+            review,
+            location,
+            age,
             star
         } = req.body
 
         try {
-        await new Review({user, product, commentary, star})
+        await new Review({user, product, reviewTitle, review, location, age, star})
         
         res.status(201).json({
             message: 'Review created',
@@ -122,17 +125,11 @@ const ReviewController = {
     deleteReview : async (req, res) => {
         let {id} = req.params
 
-        let newReview = req.body.review
-
         try {
             let review = await Review.findByIdAndDelete({_id:id})
-            if (Review){
-                
-                review.review= newReview
-                await comment.save()
+            if (review){               
                 res.status(200).json({
                     message: "The review was deleted",
-                    response: review,
                     success: true
                 })
             }
