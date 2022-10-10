@@ -43,6 +43,7 @@ const validator = Joi.object({
 
 const productsControllers = {
   getProducts: async (req, res) => {
+    
     let query = {};
 
     if (req.query.type) {
@@ -161,4 +162,5 @@ const productsControllers = {
     }
   },
 };
+
 module.exports = productsControllers;
