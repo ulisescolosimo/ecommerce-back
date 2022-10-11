@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Salty Shop' });
 });
 
-router.get('/payments', function(req, res, next) {
+router.post('/payments', function(req, res, next) {
   PaymentInstance.getPaymentLink(req, res)
 });
 

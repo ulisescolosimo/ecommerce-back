@@ -2,25 +2,28 @@ const axios = require("axios");
 
 class PaymentService {
   async createPayment(req, res) {
+
+    const itemsArray = item => ({
+      title: item.brand,
+      description: item.description,
+      picture_url: item.photo[0],
+      quantity: item.quantity,
+      unit_price: item.price,
+    })
+
     const url = "https://api.mercadopago.com/checkout/preferences";
 
     const body = {
-      items: [
-        {
-          title: "Dummy Title",
-          description: "Dummy description",
-          picture_url: "http://www.myapp.com/myimage.jpg",
-          category_id: "category123",
-          quantity: 1,
-          unit_price: 10,
-        },
-      ],
+      items: req.body.items.map(itemsArray),
       back_urls: {
-        failure: "/failure",
-        pending: "/pending",
-        success: "/success",
+        "success": "https://www.success.com",
+        "failure": "http://www.failure.com",
+        "pending": "http://www.pending.com"
       },
     };
+
+    console.log(body)
+
 
     const payment = await axios.post(url, body, {
       headers: {
