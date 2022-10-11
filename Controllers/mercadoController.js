@@ -29,6 +29,7 @@ const mercadoController = {
 },
 
 createBuy: async(req,res)=>{
+
     try {
         let cart = await new Buy(req.body).save()
         res.status(201).json({

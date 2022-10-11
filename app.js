@@ -2,14 +2,6 @@ require("dotenv").config();
 require("./config/database");
 var cors = require("cors");
 
-// SDK de Mercado Pago
-const mercadopago = require("mercadopago");
-// Agrega credenciales
-mercadopago.configure({
-  access_token:
-    "TEST-993360413155927-101021-7ad14e4acbbec9ffe419db9b31a47663-379222509",
-});
-
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
