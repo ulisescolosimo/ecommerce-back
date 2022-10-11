@@ -8,6 +8,14 @@ const {
   getReviews,
 } = require("../Controllers/ReviewController");
 
+
+router.post ('/', passport.authenticate('jwt', {session:false}), createReview)
+router.get('/', reviews)
+router.patch('/:id', passport.authenticate('jwt', {session:false}), updateReview)
+router.delete('/:id',passport.authenticate('jwt', {session:false}), deleteReview)
+
+module.exports = router;
+
 router.get("/", getReviews);
 router.post(
   "/",
@@ -26,3 +34,4 @@ router.delete(
 );
 
 module.exports = router;
+

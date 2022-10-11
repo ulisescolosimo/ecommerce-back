@@ -78,6 +78,24 @@ const ReviewController = {
       if (review) {
         review.review = newReview;
 
+
+        try {
+            let review = await Review.findByIdAndDelete({_id:id})
+            if (Review){
+                
+                review.review= newReview
+                await comment.save()
+                res.status(200).json({
+                    message: "The review was deleted",
+                    response: review,
+                    success: true
+                })
+            }
+        } catch (error) {
+         console.log(error)   
+        }
+    },
+}
         await comment.save();
         res.status(200).json({
           message: "The review was updated",
@@ -105,5 +123,6 @@ const ReviewController = {
     }
   },
 };
+
 
 module.exports = ReviewController;
