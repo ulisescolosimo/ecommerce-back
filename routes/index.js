@@ -5,6 +5,7 @@ const usersRouter = require('./usersLogin')
 const productsRouter = require('./products')
 const reviewsRouter = require('./reviews')
 const couponsRouter = require('./coupons')
+const mercadoRouter = require('./buy')
 
 
 router.get('/', function(req, res, next) {
@@ -15,6 +16,7 @@ router.use('/auth', usersRouter)
 router.use('/products', productsRouter)
 router.use('/reviews', reviewsRouter)
 router.use('/coupons', couponsRouter)
+router.use('/checkout', mercadoRouter)
 
 
 module.exports = router;
