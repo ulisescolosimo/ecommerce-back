@@ -145,25 +145,6 @@ const ReviewController = {
          console.log(error)   
         }
     },
-    
-  /*  destroy: async (req, res) => {
-        const Revieww = req.body
-        let { id } = req.params
-        try {
-            let deleteReview = await Review.findOneAndDelete({ _id: id }, Revieww,)
-            res.status(200).json({
-                message: "Review deleted",
-                success: true
-            })
-
-        } catch (error) {
-            console.log(error)
-            res.status(400).json({
-                message: "Review not found",
-                success: false
-            })
-        }
-    }*/
 }
 
 module.exports = ReviewController

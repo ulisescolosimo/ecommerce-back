@@ -160,5 +160,39 @@ const productsControllers = {
       });
     }
   },
+  
+  favorites: async (req, res) => {
+
+    let userId = req.user.id
+    let { id } = req.params
+
+  console.log(id)
+
+  try {
+      let product = await Product.findOne({ _id: id })
+
+      if (product.likes.includes(userId)) {
+          await Product.findOneAndUpdate({ _id: id }, { $pull: { likes: userId } }, { new: true })
+          res.status(200).json({
+              message: 'Add to favorites',
+              success: true
+          })
+      } else {
+          await Product.findOneAndUpdate({ _id: id }, { $push: { likes: userId } }, { new: true })
+          res.status(200).json({
+              message: 'remove to favorites',
+              success: true
+          })
+      }
+  } catch (error) {
+      console.log(error)
+      res.status(400).json({
+          message: 'error',
+          success: 'false'
+      })
+
+  }
+
+},
 };
 module.exports = productsControllers;
