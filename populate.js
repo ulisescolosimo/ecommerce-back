@@ -110,7 +110,7 @@ Product.create (
     price: 85,
     likes: [],
     stock: 50,
-    photo: ["https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_black_01.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_duo.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_black_3.jpg?fit=1080%2C1080&ssl=1"],
+    photo: ["https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_black_01.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_duo.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/09/magnet_black_3.jpg?fit=1080%2C1080&ssl=1", 'https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/d7c384551f5371795a81d64f480f8258/r/v/rv130723-d.png', 'https://d3r2zleywq7959.cloudfront.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/5/4/54894_xlarge.jpg'],
 
 },
 {   
@@ -123,16 +123,6 @@ Product.create (
     stock: 50,
     photo: ["https://i0.wp.com/abaco.la/wp-content/uploads/2022/07/bolso-wkd-sq-4.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/07/bolso-wkd-sq-4.jpg?fit=1080%2C1080&ssl=1", "https://i0.wp.com/abaco.la/wp-content/uploads/2022/03/bolso-black-2.jpg?fit=1080%2C1080&ssl=1"],
 
-},
-{   
-    brand: "Bolso De Mano Doble Cierre" ,
-    type: "bolsos",
-    model: "Bando",
-    description: "Bolso de mano, comodo, ligero con un estilo rustico",
-    price: 30,
-    likes: [],
-    stock: 50,
-    photo: ["https://www.bandobasicos.com.ar/3641-thickbox_default/bolso-de-mano-doble-cierre-neto-negro.jpg"],
 },
 {   
     brand: "Anteojos Jerome" ,
@@ -202,16 +192,16 @@ Product.create (
     price: 115,
     likes: [],
     stock: 50,
-    photo: ["https://juleriaque.vteximg.com.br/arquivos/ids/167647-150-150/ck-everyone-edt-4822F957E50D072C2348914B5BA9114D.jpg?v=637363932176430000"],
+    photo: ["https://juleriaque.vteximg.com.br/arquivos/ids/167647-1000-1000/ck-everyone-edt-4822F957E50D072C2348914B5BA9114D.jpg?v=637363932176430000", 'https://perfugroupar.vtexassets.com/arquivos/ids/174570/1.jpg?v=637891051184570000'],
 },
 {   
     brand: "FLEUR DE PORTOFINO EDP" ,
     type: "perfume",
     model: "juleriaque",
     description: "Las gafas cumplen con las normas internacionales de calidad, bajo conformidad con las disposiciones y requisitos fundamentales de seguridad establecidos en las normas europeas, americanas y australianas.",
-    price: 505,
+    price: 145,
     likes: [],
     stock: 50,
-    photo: ["https://juleriaque.vteximg.com.br/arquivos/ids/165202-150-150/fleur-de-portofino-edp-C543F2DB6D475EE341310BF4D9A62C8E.jpg?v=637347506141800000"],
+    photo: ['https://www.sephora.com/productimages/sku/s1716646-main-zoom.jpg', 'https://cdn.fragrancenet.com/images/photos/900x900/290198.jpg'],
 },
 )
