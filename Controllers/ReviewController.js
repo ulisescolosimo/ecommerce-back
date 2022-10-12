@@ -33,8 +33,8 @@ const ReviewController = {
     
         let query = {};
     
-        if (req.query.type) {
-        query.type = req.query.type;
+        if (req.query.product) {
+        query.product = req.query.product;
         }
     
         try {
