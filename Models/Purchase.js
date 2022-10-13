@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const PurchaseSchema = new mongoose.Schema ({
     user: {type:mongoose.Types.ObjectId, ref:'users'},
-    items: [{type: String, required: true}],
+    product: {type:mongoose.Types.ObjectId, ref:'products'},
     shipping: {type: String, required: true},
     amount: {type: Number, required: true}
 })
