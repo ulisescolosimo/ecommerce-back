@@ -7,7 +7,6 @@ class PaymentController {
 
     try {
       const payment = await this.subscriptionService.createPayment(req);
-      console.log(payment.init_point)
       return res.json(payment);
       
     } catch (error) {
