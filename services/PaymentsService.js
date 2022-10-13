@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-class PaymentService {
+class PaymentsService {
   async createPayment(req, res) {
 
     const quantity = req.body.items.map(e => e.quantity)
@@ -40,4 +40,4 @@ class PaymentService {
   }
 }
 
-module.exports = PaymentService;
+module.exports = PaymentsService;
