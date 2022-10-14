@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const passport = require("../config/passport");
 
-const {signUp, getUsers, deleteUser, verifyMail, signIn, signOut, verifyToken} = require('../controllers/userController')
+const {signUp, getUsers, deleteUser, verifyMail, signIn, signOut, verifyToken} = require('../Controllers/userController')
 
 router.post('/signup', signUp);
 router.post('/signin', signIn)
