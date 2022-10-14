@@ -7,7 +7,7 @@ const PaymentInstance = new PaymentController(new PaymentsServices())
 
 const usersRouter = require('./usersLogin')
 const productsRouter = require('./products')
-const reviewsRouter = require('./reviews')
+const reviewsRouter = require('./Reviews')
 const couponsRouter = require('./coupons')
 const mercadoRouter = require('./buy')
 
