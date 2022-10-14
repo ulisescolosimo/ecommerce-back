@@ -10,7 +10,7 @@ const productsRouter = require('./products')
 const reviewsRouter = require('./Reviews')
 const couponsRouter = require('./coupons')
 const mercadoRouter = require('./buy')
-
+ 
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Salty Shop' });
