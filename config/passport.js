@@ -2,7 +2,7 @@ const passport = require('passport');
 const passportJwt = require('passport-jwt');
 
 const {KEY_JWT} = process.env
-const User = require('../Models/User')
+const User = require('../models/User')
 
 passport.use(
     new passportJwt.Strategy(

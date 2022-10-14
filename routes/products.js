@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 let passport = require('../config/passport')
 
-const { getProducts, getOneProduct, createProduct, updateProduct, deleteProduct, favourites } = require('../Controllers/productController')
+const { getProducts, getOneProduct, createProduct, updateProduct, deleteProduct, favourites } = require('../controllers/productController')
 
 router.get('/', getProducts)
 router.get('/:id', getOneProduct)
