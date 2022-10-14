@@ -6,7 +6,7 @@ const {
   deleteReview,
   createReview,
   getReviews,
-} = require("../controllers/ReviewController");
+} = require("../Controllers/ReviewController");
 
 
 router.get("/", getReviews);

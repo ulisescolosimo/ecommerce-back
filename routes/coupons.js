@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { getAllCoupons ,getCoupon, createCoupon, deleteCoupon } = require('../controllers/couponController')
+const { getAllCoupons ,getCoupon, createCoupon, deleteCoupon } = require('../Controllers/couponController')
 
 router.get('/', getAllCoupons)
 router.get('/:id', getCoupon)
