@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const PaymentController = require('../Controllers/PaymentsController')
+const PaymentController = require('../controllers/PaymentsController')
 const PaymentsServices = require('../services/PaymentsService')
 const PaymentInstance = new PaymentController(new PaymentsServices())
 
 const usersRouter = require('./usersLogin')
 const productsRouter = require('./products')
-const reviewsRouter = require('./Reviews')
+const reviewsRouter = require('./reviews')
 const couponsRouter = require('./coupons')
 const mercadoRouter = require('./buy')
- 
+
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Salty Shop' });

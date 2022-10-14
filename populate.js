@@ -2,7 +2,7 @@ require("dotenv").config()
 
 const db = require ("./config/database")
 
-const Product = require("./Models/Product")
+const Product = require("./models/Product")
 
 Product.create (
     {
