@@ -1,4 +1,4 @@
-const Buy = require("../models/Buy");
+const Buy = require("../Models/Buy");
 
 const mercadoController = {
 
